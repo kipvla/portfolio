@@ -1,0 +1,11 @@
+<script>
+	// import Navbar from './components/Navbar.svelte'
+	import Gallery from './components/Gallery.svelte'
+	import Hero from './components/Hero.svelte'
+	import Home from './pages/Home.svelte'
+</script>
+
+<Home />
+<!-- <Hero /> -->
+<!-- <Navbar /> -->
+<!-- <Gallery /> -->

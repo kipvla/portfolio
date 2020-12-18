@@ -1,0 +1,211 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.soon {
+    background-image: url("images/kewannee_bwalk_flare.JPG");
+	background-position: center center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+    /* padding-top: 300px; */
+}
+
+.hero {
+    height: 25px;
+}
+
+.container {
+	text-align: center;
+	/* background-color: rgba(0,0,0,.4); */
+	/* color: white; */
+    text-shadow: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    /* margin-top: 40px; */
+    height: 100vh;
+}
+
+.card-title {
+    /* text-shadow: 1px 1px 2px #111; */
+    justify-content: baseline;
+  }
+  
+  .card {
+    border: none;
+    /* height: 22rem;
+    width: 22rem; */
+    margin: auto;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: transform 2s;
+  }
+  
+  .card div {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s, opacity .5s;
+    text-align: right;
+    align-items: baseline;
+  }
+  
+  .card:hover div {
+    visibility: visible;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 1s, background-color 1s;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-img:hover {
+    background: rgb(0, 0, 0, 0.1);
+    transform: scale(1.5);
+    transition: transform 1s;
+  }
+  
+  /* footer */
+  
+  footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .row {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .form {
+    margin: 0 auto;
+    background-image: url("images/disappearingmtns.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-color: rgb(0, 0, 0, 0.5);
+  }
+  
+  .contact-form {
+    margin: 100px;
+  }
+  
+  input, textarea {
+    background: transparent;
+    border: none;
+  }
+  
+  .blog-intro {
+    margin-top: 120px;
+  }
+  
+  .blog-bg {
+    /* background-image: url("images/self.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height: 500px;
+  }
+  
+  .blog-post {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .option {
+    /* flex-grow: 3; */
+    /* height: 50px; */
+    width: 46%;
+    transition: transform 1s, border-radius 1s;
+    overflow: hidden;
+  }
+
+  .option:hover {
+    transform: scale(1.05);
+    /* border-radius: 10px; */
+    transition: transform 1s, border-radius 1s;
+  }
+
+  .home {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  #one, #two {
+      /* align-self: flex-end; */
+      border: none;
+  }
+
+  #three {
+      /* width: 40%; */
+      align-self: baseline;
+      border: none;
+  }
+
+  #four {
+      align-self: baseline;
+      border: none;
+      margin: 0 auto;
+  }
+
+  .title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      padding-left: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 2.5;
+    padding-right: 0;
+  }
+
+  #grib {
+      color: green;
+  }
+
+  .sidebar-item {
+    transition: transform .5s;
+  }
+
+  .sidebar-item:hover {
+      color: white;
+      transform: scale(1.2) translateX(-3px);
+      background-color: darkcyan;
+      transition: transform .5s, color .5s, background-color .5s;
+  }
+
+  .card {
+      border: none;
+  }
+
+a {
+    color: darkblue;
+}
