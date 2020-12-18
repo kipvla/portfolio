@@ -13,7 +13,39 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="application/javascript">
+	function getIP(json) {
+	  console.log("My public IP address is: ", json.ip);
+	}
+  </script>
+  
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 	<script defer src='/build/bundle.js'></script>
+
+	<script>
+		var endpoint = 'http://ip-api.com/json/?fields=status,message,countryCode';
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var response = JSON.parse(this.responseText);
+		if(response.status !== 'success') {
+			console.log('query failed: ' + response.message);
+			return
+		}
+		// Redirect
+		if(response.countryCode == "US") {
+			window.location.replace("https://google.com/gribs");
+		}
+		if(response.countryCode == "CA") {
+			// window.location.replace("https://google.ca/");
+		}
+	}
+};
+xhr.open('GET', endpoint, true);
+xhr.send();
+	</script>
 </head>
 
 <body>
