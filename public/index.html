@@ -13,9 +13,12 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script type="application/javascript">
+<script 
+let ip = '';
+type="application/javascript">
 	function getIP(json) {
-	  console.log("My public IP address is: ", json.ip);
+	//   console.log("My public IP address is: ", json.ip);
+	  ip = json.ip;
 	}
   </script>
   
@@ -24,27 +27,41 @@
 	<script defer src='/build/bundle.js'></script>
 
 	<script>
-		var endpoint = 'http://ip-api.com/json/?fields=status,message,countryCode';
+		// var endpoint = `https://api.ipregistry.co/72.239.172.172?key=mv10wkkiamjxjl`;
+		// console.log(ip)
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var response = JSON.parse(this.responseText);
-		if(response.status !== 'success') {
-			console.log('query failed: ' + response.message);
-			return
-		}
-		// Redirect
-		if(response.countryCode == "US") {
-			window.location.replace("https://google.com/gribs");
-		}
-		if(response.countryCode == "CA") {
-			// window.location.replace("https://google.ca/");
-		}
-	}
-};
-xhr.open('GET', endpoint, true);
-xhr.send();
+		let requestURL = `https://api.ipregistry.co/${ip}?key=mv10wkkiamjxjl`;
+let request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+  const superHeroes = request.response;
+  console.log(`I'm watching you through your window in ${superHeroes.location.city}.`);
+}
+
+
+// var xhr = new XMLHttpRequest();
+// xhr.onreadystatechange = function() {
+// 	if (this.readyState == 4 && this.status == 200) {
+// 		console.log()
+// 		var response = JSON.parse(this.responseText);
+// 		if(response.status !== 'success') {
+// 			console.log('query failed: ' + response.message);
+// 			return
+// 		}
+// 		// Redirect
+// 		if(response.country.code == "US") {
+// 			window.location.replace("https://google.com/search?q=gribs");
+// 		}
+// 		if(response.country.code == "CA") {
+// 			// window.location.replace("https://google.ca/");
+// 		}
+// 	}
+// };
+// xhr.open('GET', endpoint, true);
+// xhr.send();
 	</script>
 </head>
 
