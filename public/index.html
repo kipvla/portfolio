@@ -10,6 +10,14 @@
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link
+	rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+	crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -30,16 +38,16 @@ type="application/javascript">
 		// var endpoint = `https://api.ipregistry.co/72.239.172.172?key=mv10wkkiamjxjl`;
 		// console.log(ip)
 
-		let requestURL = `https://api.ipregistry.co/${ip}?key=mv10wkkiamjxjl`;
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+// 		let requestURL = `https://api.ipregistry.co/${ip}?key=mv10wkkiamjxjl`;
+// let request = new XMLHttpRequest();
+// request.open('GET', requestURL);
+// request.responseType = 'json';
+// request.send();
 
-request.onload = function() {
-  const superHeroes = request.response;
-  console.log(`I'm watching you through your window in ${superHeroes.location.city}.`);
-}
+// request.onload = function() {
+//   const superHeroes = request.response;
+//   console.log(`How's the weather in ${superHeroes.location.city}?`);
+// }
 
 
 // var xhr = new XMLHttpRequest();

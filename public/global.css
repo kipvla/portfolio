@@ -37,50 +37,7 @@ body {
     height: 100vh;
 }
 
-.card-title {
-    /* text-shadow: 1px 1px 2px #111; */
-    justify-content: baseline;
-  }
-  
-  .card {
-    border: none;
-    /* height: 22rem;
-    width: 22rem; */
-    margin: auto;
-  }
-  
-  .card:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 2s;
-  }
-  
-  .card div {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility .5s, opacity .5s;
-    text-align: right;
-    align-items: baseline;
-  }
-  
-  .card:hover div {
-    visibility: visible;
-    background-color: rgb(0, 0, 0, 0.5);
-    opacity: 1;
-    transition: opacity 1s, background-color 1s;
-  }
-  
-  .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-img:hover {
-    background: rgb(0, 0, 0, 0.1);
-    transform: scale(1.5);
-    transition: transform 1s;
-  }
+
   
   /* footer */
   
@@ -130,20 +87,6 @@ body {
     margin-bottom: 50px;
   }
 
-  .option {
-    /* flex-grow: 3; */
-    /* height: 50px; */
-    width: 46%;
-    transition: transform 1s, border-radius 1s;
-    overflow: hidden;
-  }
-
-  .option:hover {
-    transform: scale(1.05);
-    /* border-radius: 10px; */
-    transition: transform 1s, border-radius 1s;
-  }
-
   .home {
     margin-top: 7rem;
     display: flex;
@@ -189,17 +132,6 @@ body {
 
   #grib {
       color: green;
-  }
-
-  .sidebar-item {
-    transition: transform .5s;
-  }
-
-  .sidebar-item:hover {
-      color: white;
-      transform: scale(1.2) translateX(-3px);
-      background-color: darkcyan;
-      transition: transform .5s, color .5s, background-color .5s;
   }
 
   .card {
