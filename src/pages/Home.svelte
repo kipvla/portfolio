@@ -209,6 +209,9 @@
         <div class="col-12 col-md-2">
             <div class="container sidebar text-right">
                 <ul class="list-unstyled">
+                    <a href="https://github.com/kipvla">
+                        <li class="sidebar-item">Github</li>
+                    </a>
                     <a href="images/TechResume.pdf">
                         <li class="sidebar-item">Resume</li>
                     </a>
