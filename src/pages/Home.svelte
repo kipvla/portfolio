@@ -1,7 +1,11 @@
+<script>
+    import projects from "../projects";
+</script>
 
 <style>
-    .container {
+    .container-fluid {
         font-family: 'Source Code Pro', monospace;
+
     }
     .option {
         /* flex-grow: 3; */
@@ -16,22 +20,18 @@
         /* border-radius: 10px; */
         transition: transform 1s, border-radius 1s;
     }
-
-    .card-title {
-    /* text-shadow: 1px 1px 2px #111; */
-    justify-content: baseline;
-  }
   
   .card {
     border: none;
     /* height: 22rem;
     width: 22rem; */
     margin: auto;
+    transition: transform 1s;
   }
   
   .card:hover {
     cursor: pointer;
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 2s;
   }
   
@@ -39,8 +39,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility .5s, opacity .5s;
-    text-align: right;
-    align-items: baseline;
+    /* text-align: right; */
   }
   
   .card:hover div {
@@ -72,154 +71,50 @@
       /* background-color: darkcyan; */
       transition: transform .5s, color .5s, background-color .5s;
   }
-    a span {
-        color: black;
-        font-size: 16px;
-        background-color: white;
 
-        position: absolute;
-        top: 45%;
-        right: 79%;
-        margin-right: -350px;
+  #cards {
+      align-items: flex-start;
+  }
 
-        border-style: solid;
-        border-radius: 1rem;
+  .sidebar {
+      flex-direction: column;
+  }
+  ul {
+      display: inline;
+  }
 
-        transform: scale(0);
-        -webkit-transform: scale(0);
-
-        transition: opacity 1s, transform 1.5s;
-        -webkit-transition: opacity 1s, transform 1.5s;
-        transition-delay: 0.5s;
-        -webkit-transition-delay: 0.5s;
-
-        opacity: 0;
-        z-index: 50;
-    }
-    a div:hover ~ span {
-        opacity: 1;
-        transform: scale(1);
-        -webkit-transform: scale(1);
-    }
+  @media only screen and (max-width: 768px) {
+        #all {
+            flex-direction: column;
+        }
+        .sidebar {
+            flex-direction: row;
+        }
+        ul {
+            display: flex;
+        }
+  }
 </style>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-2">
-            <div
-                class="container title text-left font-weight-heavy d-flex flex-column justify-content-center pb-5 mb-5">
-                <h1 class="display-4">Kip Riecken</h1>
+<div class="container-fluid d-flex justify-content-between" id="all">
+    <div class="d-flex flex-column justify-content-center order-0">Kip Riecken</div>
+    <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
+        {#each projects as project}
+            <div class="card" style="width: 30rem;">
+                <a href="{project.url}">
+                    <img class="card-img-top" src="{project.image}" alt="{project.title}">
+                </a>
+                <div class="card-body">
+                <p class="card-text">{project.title}</p>
+                </div>
             </div>
-        </div>
-        <div class="col-12 col-md-8">
-            <div class="container home card-columns">
-                <div class="d-flex justify-content-center"></div>
-                <div class="card bg-dark text-white option m-2" id="one">
-                    <a href="https://happy-carson-6e7a3e.netlify.app/">
-                        <img
-                            class="card-img img-thumbnail"
-                            src="images/AdventScreenS.png"
-                            alt="Family outside" />
-                        <div class="card-img-overlay">
-                            <!-- <h5 class="card-title">Card title</h5>
-                            <p class="card-text">
-                                This is a wider card with supporting text below
-                                as a natural lead-in to additional content. This
-                                content is a little bit longer.
-                            </p>
-                            <p class="card-text">Last updated 3 mins ago</p> -->
-                        </div>
-                    </a>
-                </div>
-                <a href="https://happy-carson-6e7a3e.netlify.app/" class="">
-                    <div><i class="fas fa-plus"></i></div>
-                    <span class="p-2">
-                        <div>Responsive Advent Calendar</div>
-                        <!-- Put your text HERE-->
-                    </span>
-                </a>
-                <div class="card bg-dark text-white option" id="two">
-                    <a href="https://vast-garden-58006.herokuapp.com/">
-                        <img
-                            class="card-img img-thumbnail"
-                            src="images/VotingScreenS.png"
-                            alt="Family outside" />
-                        <div class="card-img-overlay">
-                            <h5 class="card-title"> </h5>
-                            <p class="card-text">
-                            </p>
-                            <p class="card-text"></p>
-                        </div>
-                    </a>
-                </div>
-                <a href="https://vast-garden-58006.herokuapp.com/" class="">
-                    <div><i class="fas fa-plus"></i></div>
-                    <span class="p-2">
-                        <div>Site for US voting information</div>
-                        <!-- Put your text HERE-->
-                    </span>
-                </a>
-                <div class="card bg-dark text-white option" id="three">
-                    <a href="https://dazzling-montalcini-f8bc50.netlify.app/">
-                        <img
-                            class="card-img img-thumbnail"
-                            src="images/meScreenS.png"
-                            alt="Family outside" />
-                        <div class="card-img-overlay">
-                            <h5 class="card-title"> </h5>
-                            <p class="card-text">
-                            </p>
-                            <p class="card-text"></p>
-                        </div>
-                    </a>
-                </div>
-                <a href="https://dazzling-montalcini-f8bc50.netlify.app/" class="">
-                    <div><i class="fas fa-plus"></i></div>
-                    <span class="p-2">
-                        <div>My personal site</div>
-                        <!-- Put your text HERE-->
-                    </span>
-                </a>
-                <div class="card bg-dark text-white option align-self-center" id="four">
-                    <a href="https://wizardly-knuth-3d0e75.netlify.app/">
-                        <img
-                            class="card-img img-thumbnail"
-                            src="images/SamScreenS.png"
-                            alt="Family outside" />
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Sam Peterson Photography</h5>
-                            <p class="card-text">
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <a href="https://wizardly-knuth-3d0e75.netlify.app/" class="">
-                    <div><i class="fas fa-plus"></i></div>
-                    <span class="p-2">
-                        <div>Photography site for a friend</div>
-                        <!-- Put your text HERE-->
-                    </span>
-                </a>
-                <!-- <img src="images/brewery.jpg"  class="option w-sm-100" id="one" alt="">
-                <img src="images/Wekiva_green.jpg" class="option" id="two" alt="">
-                <img src="images/KR32.jpg" class="option" id="three" alt="">
-                <img src="images/disappearingmtns.jpeg" class="option" id="four" alt=""> -->
-            </div>
-        </div>
-        <div class="col-12 col-md-2">
-            <div class="container sidebar text-right">
-                <ul class="list-unstyled">
-                    <a href="https://github.com/kipvla">
-                        <li class="sidebar-item">Github</li>
-                    </a>
-                    <a href="images/TechResume.pdf">
-                        <li class="sidebar-item">Resume</li>
-                    </a>
-                    <a href="mailto:kip.riecken@gmail.com">
-                        <li class="sidebar-item">Contact</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
+        {/each}
+    </div>
+    <div class="d-flex justify-content-center order-0 order-md-2 sidebar">
+        <ul class="list-unstyled">
+            <li class="sidebar-item"><a href="/"><i class="fab fa-github"></i></a> </li>
+            <li class="sidebar-item"><a href="/">Resume</a> </li>
+            <li class="sidebar-item"><a href="/"><i class="fas fa-envelope"></i></a> </li>
+        </ul>
     </div>
 </div>
