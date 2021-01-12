@@ -23,4 +23,10 @@ export default [
         image: "images/AdventScreenS.png",
         url: "https://adventcal.netlify.app"
     },
+    {
+        title: "What should I name my baby?",
+        description: "",
+        image: "images/BabyScreenS.png",
+        url: "https://whatshouldinamemybaby.herokuapp.com/"
+    },
 ]
