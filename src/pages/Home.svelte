@@ -1,5 +1,6 @@
 <script>
     import projects from "../projects";
+    import Title from '../components/Title.svelte'
 </script>
 
 <style>
@@ -60,10 +61,10 @@
     transform: scale(2);
     transition: transform 1s;
   } */
-
+/* 
   #title {
       height: 100%;
-  }
+  } */
 
   .sidebar-item {
     transition: transform .5s;
@@ -107,10 +108,7 @@
 </style>
 
 <div class="container-fluid d-flex justify-content-between" id="all">
-    <div class="d-flex flex-column justify-content-start order-0" id="title">
-        <h1>kip riecken</h1>
-        <div>developer</div>
-    </div>
+    
     <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
         {#each projects as project}
             <div class="card" style="width: 30rem;">
