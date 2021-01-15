@@ -8,19 +8,6 @@
         font-family: 'Source Code Pro', monospace;
 
     }
-    /* .option {
-        flex-grow: 3;
-        height: 50px;
-        width: 40%;
-        transition: transform 1s, border-radius 1s;
-        overflow: hidden;
-    }
-
-    .option:hover {
-        transform: scale(1.05);
-        border-radius: 10px;
-        transition: transform 1s, border-radius 1s;
-    } */
   
   .card {
     border: none;

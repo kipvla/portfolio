@@ -1,9 +1,6 @@
 <script>
     import { onMount } from "svelte";
-
-
-
-
+    
     onMount(() => {
         var typer = document.getElementById("typewriter");
         function setupTypewriter(t) {

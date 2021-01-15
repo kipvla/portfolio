@@ -11,18 +11,6 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-.soon {
-    background-image: url("images/kewannee_bwalk_flare.JPG");
-	background-position: center center;
-	background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 700px;
-    /* padding-top: 300px; */
-}
-
 .hero {
     height: 25px;
 }
@@ -37,8 +25,6 @@ body {
     height: 100vh;
 }
 
-
-  
   /* footer */
   
   footer {
@@ -80,11 +66,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover; */
     height: 500px;
-  }
-  
-  .blog-post {
-    margin-top: 50px;
-    margin-bottom: 50px;
   }
 
   .home {
