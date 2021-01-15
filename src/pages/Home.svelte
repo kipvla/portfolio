@@ -72,7 +72,7 @@
 
   .sidebar-item:hover {
       color: black;
-      transform: scale(1.2) translateX(-3px);
+      transform: scale(1.2);
       /* background-color: darkcyan; */
       transition: transform .5s, color .5s, background-color .5s;
   }
@@ -107,8 +107,9 @@
   }
 </style>
 
-<div class="container-fluid d-flex justify-content-between" id="all">
+<div class="container-fluid justify-content-between" id="all">
     <Title/>
+    <br>
     <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
         {#each projects as project}
             <div class="card" style="width: 30rem;">
