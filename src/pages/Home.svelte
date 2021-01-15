@@ -84,7 +84,7 @@
 
   .sidebar {
       flex-direction: column;
-      justify-content: flex-end;
+      /* justify-content: flex-end; */
   }
   /* ul {
       display: inline;
@@ -108,7 +108,7 @@
 </style>
 
 <div class="container-fluid d-flex justify-content-between" id="all">
-    
+    <Title/>
     <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
         {#each projects as project}
             <div class="card" style="width: 30rem;">

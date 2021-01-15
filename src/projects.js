@@ -17,12 +17,12 @@ export default [
         image: "images/VotingScreenS.png",
         url: "https://usvotingapp2020.herokuapp.com/"
     },
-    {
-        title: "Responsive Advent Calendar",
-        description: "",
-        image: "images/AdventScreenS.png",
-        url: "https://adventcal.netlify.app"
-    },
+    // {
+    //     title: "Responsive Advent Calendar",
+    //     description: "",
+    //     image: "images/AdventScreenS.png",
+    //     url: "https://adventcal.netlify.app"
+    // },
     {
         title: "What should I name my baby?",
         description: "",
