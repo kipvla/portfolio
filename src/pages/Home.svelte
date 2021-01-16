@@ -10,27 +10,23 @@
 
     .card {
         border: none;
-        /* height: 22rem;
-    width: 22rem; */
         margin: auto;
-        /* transition: transform 1s; */
+        transition: transform 0.2s;
     }
 
     .card:active {
         transform: scale(0.96);
+        transition: transform 0.2s;
     }
 
     .card:hover {
         cursor: pointer;
-        /* transform: scale(1.02); */
-        /* transition: transform 2s; */
     }
 
     .card div {
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0.5s, opacity 0.5s;
-        /* text-align: right; */
+        transition: visibility 0.5s, opacity 1s;
     }
 
     .card:hover div {
@@ -40,30 +36,13 @@
         transition: opacity 1s, background-color 1s;
     }
 
-    /* .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-img:hover {
-    background: rgb(0, 0, 0, 0.1);
-    transform: scale(2);
-    transition: transform 1s;
-  } */
-    /* 
-  #title {
-      height: 100%;
-  } */
-
     .sidebar-item {
         transition: transform 0.5s;
     }
 
     .sidebar-item:hover {
         color: black;
-        transform: scale(1.2);
-        /* background-color: darkcyan; */
+        transform: scale(1.05);
         transition: transform 0.5s, color 0.5s, background-color 0.5s;
     }
 
@@ -73,17 +52,15 @@
     }
 
     .sidebar {
-        flex-direction: column;
-        /* justify-content: flex-end; */
+        display: flex;
+        width: 100%;
     }
-    /* ul {
-      display: inline;
-  } */
+    
+    .sidebar a {
+        margin: 0 1rem;
+    }
 
     @media only screen and (max-width: 768px) {
-        #all {
-            flex-direction: column;
-        }
         .sidebar {
             flex-direction: row;
         }
@@ -125,18 +102,21 @@
         {/each}
     </div>
     <div class="order-0 order-md-2 sidebar">
-        <ul class="list-unstyled" id="sidebar">
-            <li class="sidebar-item">
+        <!-- <ul class="list-unstyled" id="sidebar"> -->
+            <!-- <li class="sidebar-item"> -->
                 <a href="https://github.com/kipvla"><i
                         class="fab fa-github" /></a>
-            </li>
-            <li class="sidebar-item">
+            <!-- </li> -->
+            <!-- <li class="sidebar-item"> -->
                 <a href="mailto:kip.riecken@gmail.com"><i
                         class="fas fa-envelope" /></a>
-            </li>
-            <li class="sidebar-item">
+            <!-- </li> -->
+            <!-- <li class="sidebar-item"> -->
                 <a href="images/TechResume.pdf">resume</a>
-            </li>
-        </ul>
+            <!-- </li> -->
+        <!-- </ul> -->
+    </div>
+    <div class="footer">
+        Copyright Kip Riecken
     </div>
 </div>
