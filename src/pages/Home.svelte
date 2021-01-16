@@ -16,6 +16,10 @@
         /* transition: transform 1s; */
     }
 
+    .card:active {
+        transform: scale(0.96);
+    }
+
     .card:hover {
         cursor: pointer;
         /* transform: scale(1.02); */
@@ -98,7 +102,7 @@
     <br />
     <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
         {#each projects as project}
-            <div class="card my-4" style="width: 30rem;">
+            <div class="card my-4 shadow-lg" style="width: 30rem;">
                 <a href={project.url}>
                     <img
                         class="card-img-top"

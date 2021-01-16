@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    
+
     onMount(() => {
         var typer = document.getElementById("typewriter");
         function setupTypewriter(t) {
@@ -44,7 +44,10 @@
         }
         let typewriter = setupTypewriter(typer);
         typewriter.type();
+
+    
     });
+
 </script>
 
 <style type="text/scss">
@@ -101,5 +104,6 @@
 </style>
 
 <div class="d-flex flex-column justify-content-start order-0">
-    <h1>kip riecken </h1><span id="typewriter">developerr</span>
+    <h1>kip riecken</h1>
+/*<span id="typewriter">developerr</span>*/
 </div>

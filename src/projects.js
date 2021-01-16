@@ -3,16 +3,16 @@ export default [
         title: "Sam Pederson Photography",
         description: "",
         image: "images/SamScreenS.png",
-        url: "https://sampedersonphotography.netlify.app",
+        url: "https://sampedersenphotography.netlify.app",
         specs: ["Created with SvelteJS", "Responsive", "Bootstrap formatting"]
     },
-    {
-        title: "My personal website",
-        description: "",
-        image: "images/MeScreenS.png",
-        url: "https://kipriecken.netlify.app",
-        specs: ["Created with SvelteJS", "Responsive", "Bootstrap formatting", "Functioning contact form"]
-    },
+    // {
+    //     title: "My personal website",
+    //     description: "",
+    //     image: "images/MeScreenS.png",
+    //     url: "https://kipriecken.netlify.app",
+    //     specs: ["Created with SvelteJS", "Responsive", "Bootstrap formatting", "Functioning contact form"]
+    // },
     {
         title: "Voting information for 2020 US elections",
         description: "",
