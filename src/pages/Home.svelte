@@ -36,41 +36,9 @@
         transition: opacity 1s, background-color 1s;
     }
 
-    .sidebar-item {
-        transition: transform 0.5s;
-    }
-
-    .sidebar-item:hover {
-        color: black;
-        transform: scale(1.05);
-        transition: transform 0.5s, color 0.5s, background-color 0.5s;
-    }
-
     #cards {
         align-items: flex-start;
         overflow: visible;
-    }
-
-    .sidebar {
-        display: flex;
-        width: 100%;
-    }
-    
-    .sidebar a {
-        margin: 0 1rem;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .sidebar {
-            flex-direction: row;
-        }
-        #sidebar {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .sidebar-item {
-            margin: 0 1rem;
-        }
     }
 </style>
 
@@ -101,22 +69,7 @@
             </div>
         {/each}
     </div>
-    <div class="order-0 order-md-2 sidebar">
-        <!-- <ul class="list-unstyled" id="sidebar"> -->
-            <!-- <li class="sidebar-item"> -->
-                <a href="https://github.com/kipvla"><i
-                        class="fab fa-github" /></a>
-            <!-- </li> -->
-            <!-- <li class="sidebar-item"> -->
-                <a href="mailto:kip.riecken@gmail.com"><i
-                        class="fas fa-envelope" /></a>
-            <!-- </li> -->
-            <!-- <li class="sidebar-item"> -->
-                <a href="images/TechResume.pdf">resume</a>
-            <!-- </li> -->
-        <!-- </ul> -->
-    </div>
     <div class="footer">
-        Copyright Kip Riecken
+        © Copyright 2021 Kip Riecken
     </div>
 </div>

@@ -110,14 +110,12 @@ body {
     padding-right: 0;
   }
 
-  #grib {
-      color: green;
-  }
-
   .card {
       border: none;
   }
 
 a {
-    color: darkblue;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }

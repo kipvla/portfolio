@@ -106,4 +106,19 @@
 <div class="d-flex flex-column justify-content-start order-0">
     <h1>kip riecken</h1>
 /*<span id="typewriter">developerr</span>*/
+<div class="mt-4">
+    <!-- <ul class="list-unstyled" id="sidebar"> -->
+        <!-- <li class="sidebar-item"> -->
+            <a href="https://github.com/kipvla" class="mr-2 text-dark"><i
+                    class="fab fa-github" /></a>
+        <!-- </li> -->
+        <!-- <li class="sidebar-item"> -->
+            <a href="mailto:kip.riecken@gmail.com" class="mx-2 text-dark"><i
+                    class="fas fa-envelope" /></a>
+        <!-- </li> -->
+        <!-- <li class="sidebar-item"> -->
+            <a href="images/TechResume.pdf" class="ml-2 text-dark">resume</a>
+        <!-- </li> -->
+    <!-- </ul> -->
+</div>
 </div>
