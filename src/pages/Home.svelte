@@ -1,75 +1,115 @@
 <script>
-    import projects from "../projects";
-    import Title from "../components/Title.svelte";
+  import projects from "../projects";
+  import Title from "../components/Title.svelte";
+  import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
+
+  let shown = false;
+
+  onMount(() => {
+    const showSpecs = () => {
+      const list = document.querySelector("ul");
+      list.classList.toggle("shown");
+      console.log('specs shown')
+    };
+    document.querySelector("#info").addEventListener("click", showSpecs);
+  });
 </script>
 
-<style>
-    .container-fluid {
-        font-family: "Source Code Pro", monospace;
-    }
-
-    .card {
-        border: none;
-        margin: auto;
-        transition: transform 0.2s;
-    }
-
-    .card:active {
-        transform: scale(0.96);
-        transition: transform 0.2s;
-    }
-
-    .card:hover {
-        cursor: pointer;
-    }
-
-    .card div {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.5s, opacity 1s;
-    }
-
-    .card:hover div {
-        visibility: visible;
-        background-color: rgb(0, 0, 0, 0.5);
-        opacity: 1;
-        transition: opacity 1s, background-color 1s;
-    }
-
-    #cards {
-        align-items: flex-start;
-        overflow: visible;
-    }
-</style>
-
 <div class="container-fluid justify-content-between" id="all">
-    <Title />
-    <br />
-    <div class="d-flex flex-wrap justify-content-start order-1" id="cards">
-        {#each projects as project}
-            <div class="card my-4 shadow-lg" style="width: 30rem;">
-                <a href={project.url}>
-                    <img
-                        class="card-img-top"
-                        src={project.image}
-                        alt={project.title} />
-                    <div
-                        class="card-img-overlay d-flex flex-column justify-content-end">
-                        <p class="card-text text-white" />
-                        <ul class="list-unstyled">
-                            {#each project.specs as spec}
-                                <li class="text-left text-white">{spec}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                </a>
-                <!-- <div class="card-body">
-                    <p class="card-text">{project.title}</p>
-                </div> -->
+  <Title />
+  <br />
+  <div
+    class="d-flex flex-wrap justify-content-start order-1"
+    id="cards"
+    transition:fade={{ duration: 2500 }}
+  >
+    {#each projects as project}
+      <div class="d-flex flex-column" id="outer">
+        <div class="align-self-start">
+          // {project.title}
+          <i class="fas fa-info-circle align-self-end" id="info"/>
+        </div>
+        <div class="card my-4 shadow-lg" style="width: 30rem;">
+          <a href={project.url}>
+            <img class="card-img-top" src={project.image} alt={project.title} />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end"
+            >
+              <p class="card-text text-white" />
+              <ul class="list-unstyled" class:shown={shown}>
+                {#each project.specs as spec}
+                  <li class="text-left text-white">{spec}</li>
+                {/each}
+              </ul>
             </div>
-        {/each}
-    </div>
-    <div class="footer">
-        © Copyright 2021 Kip Riecken
-    </div>
+          </a>
+          <!-- <div class="card-body">
+                      <p class="card-text">{project.title}</p>
+                  </div> -->
+        </div>
+      </div>
+    {/each}
+  </div>
+  <div class="footer">© Copyright 2021 Kip Riecken</div>
 </div>
+
+<style>
+  .container-fluid {
+    font-family: "Source Code Pro", monospace;
+  }
+
+  #outer {
+    margin: auto;
+  }
+
+  .card {
+    border: none;
+    margin: auto;
+    transition: transform 0.2s;
+  }
+
+  .card:active {
+    transform: scale(0.96);
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    cursor: pointer;
+  }
+
+ .card div ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1s, background-color 1s;
+  }
+
+  /* .card:hover div ul {
+    visibility: visible;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 1s, background-color 1s;
+  } */
+
+  .shown {
+    visibility: visible!important;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 1!important;
+    transition: opacity 1s, background-color 1s;
+  }
+
+  #cards {
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  #info {
+    display: visible;
+  }
+
+  ul {
+    max-width: fit-content;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+</style>

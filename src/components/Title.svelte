@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { scale } from 'svelte/transition';
 
     onMount(() => {
         var typer = document.getElementById("typewriter");
@@ -43,9 +44,10 @@
             };
         }
         let typewriter = setupTypewriter(typer);
-        typewriter.type();
-
-    
+        setTimeout(() => {
+            typewriter.type();
+        }, 1000)
+        
     });
 
 </script>
@@ -104,8 +106,8 @@
 </style>
 
 <div class="d-flex flex-column justify-content-start order-0">
-    <h1>kip riecken</h1>
-/*<span id="typewriter">developerr</span>*/
+    <h1 transition:scale="{{duration: 5000, opacity: 0.5, start: 0.5}}">kip riecken</h1>
+<span id="typewriter">developerr</span>
 <div class="mt-4">
     <!-- <ul class="list-unstyled" id="sidebar"> -->
         <!-- <li class="sidebar-item"> -->
