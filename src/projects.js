@@ -13,11 +13,11 @@ export default [
       description: "",
       image: "images/MeScreenS.png",
       url: "http://me.kipriecken.com",
-      specs: ["Served using Nginx on DigitalOcean", "Golang backend", "PostgreSQL database", "Created using SvelteJS", "Responsive", "Bootstrap formatting", "Functioning contact form"]
+      specs: ["Served with Nginx", "Hosted on DigitalOcean", "Golang backend", "PostgreSQL database", "Created using SvelteJS", "Responsive", "Bootstrap formatting", "Functioning contact form"]
   },
   {
     id: 2,
-    title: "Voting information for 2020 US elections",
+    title: "2020 US elections Voting Info",
     description: "",
     image: "images/VotingScreenS.png",
     url: "https://usvotingapp2020.herokuapp.com/",
@@ -33,10 +33,18 @@ export default [
   },
   {
     id: 4,
-    title: "What should I name my baby?",
+    title: "Baby Name Generator",
     description: "",
     image: "images/BabyScreenS.png",
     url: "https://whatshouldinamemybaby.herokuapp.com/",
     specs: ["Responsive", "Bootstrap formatting", "Pulls from API"],
+  },
+  {
+    id: 5,
+    title: "Bilingual Musician Site",
+    description: "",
+    image: "images/Roman.png",
+    url: "https://romanyearian.netlify.app",
+    specs: ["Created with SvelteJS", "Bilingual with svelte-i18n","Responsive", "Bootstrap formatting"],
   },
 ];
