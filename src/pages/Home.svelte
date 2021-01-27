@@ -47,9 +47,6 @@
               </ul>
             </div>
           </a>
-          <!-- <div class="card-body">
-                      <p class="card-text">{project.title}</p>
-                  </div> -->
         </div>
       </div>
     {/each}
@@ -87,12 +84,12 @@
     transition: visibility 0.5s, opacity 1s, background-color 1s;
   }
 
-  /* .card:hover div ul {
+  .card:hover div ul {
     visibility: visible;
     background-color: rgb(0, 0, 0, 0.5);
     opacity: 1;
     transition: opacity 1s, background-color 1s;
-  } */
+  }
 
   .shown {
     visibility: visible !important;
@@ -106,14 +103,12 @@
     overflow: visible;
   }
 
-  #info {
-    display: visible;
-  }
-
   ul {
     max-width: fit-content;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.5rem;
+    max-height: inherit;
+    overflow: scroll;
   }
 
   @media only screen and (max-width: 768px) {
