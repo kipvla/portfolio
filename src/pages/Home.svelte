@@ -109,6 +109,8 @@
     padding: 0.5rem;
     max-height: inherit;
     overflow: scroll;
+    line-height: 1.3;
+    font-size: 0.8rem;
   }
 
   @media only screen and (max-width: 768px) {
