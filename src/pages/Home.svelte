@@ -6,14 +6,14 @@
 
   let shown = false;
 
-  onMount(() => {
-    const showSpecs = () => {
-      const list = document.querySelector("ul");
-      list.classList.toggle("shown");
-      console.log('specs shown')
-    };
-    document.querySelector("#info").addEventListener("click", showSpecs);
-  });
+  const showSpecs = (id) => {
+    const list = document.querySelectorAll("ul");
+    console.log(id)
+    let item = list[id];
+    console.log(list)
+    item.classList.toggle("shown");
+    console.log("specs shown");
+  };
 </script>
 
 <div class="container-fluid justify-content-between" id="all">
@@ -25,10 +25,13 @@
     transition:fade={{ duration: 2500 }}
   >
     {#each projects as project}
-      <div class="d-flex flex-column" id="outer">
+      <div class="d-flex flex-column outer">
         <div class="align-self-start">
           // {project.title}
-          <i class="fas fa-info-circle align-self-end" id="info"/>
+          <i
+            class="fas fa-info-circle align-self-end"
+            on:click={() => showSpecs(project.id)}
+          />
         </div>
         <div class="card my-4 shadow-lg" style="width: 30rem;">
           <a href={project.url}>
@@ -37,7 +40,7 @@
               class="card-img-overlay d-flex flex-column justify-content-end"
             >
               <p class="card-text text-white" />
-              <ul class="list-unstyled" class:shown={shown}>
+              <ul class="list-unstyled" class:shown>
                 {#each project.specs as spec}
                   <li class="text-left text-white">{spec}</li>
                 {/each}
@@ -59,7 +62,7 @@
     font-family: "Source Code Pro", monospace;
   }
 
-  #outer {
+  .outer {
     margin: auto;
   }
 
@@ -78,7 +81,7 @@
     cursor: pointer;
   }
 
- .card div ul {
+  .card div ul {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s, opacity 1s, background-color 1s;
@@ -92,9 +95,9 @@
   } */
 
   .shown {
-    visibility: visible!important;
+    visibility: visible !important;
     background-color: rgb(0, 0, 0, 0.5);
-    opacity: 1!important;
+    opacity: 1 !important;
     transition: opacity 1s, background-color 1s;
   }
 
@@ -111,5 +114,11 @@
     max-width: fit-content;
     border-radius: 5px;
     padding: 1rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .card {
+      max-width: 90vw;
+    }
   }
 </style>
