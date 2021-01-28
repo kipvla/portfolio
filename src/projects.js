@@ -13,7 +13,7 @@ export default [
       description: "",
       image: "images/MeScreenS.png",
       url: "http://me.kipriecken.com",
-      specs: ["Served with Nginx", "Hosted on DigitalOcean", "Golang backend", "PostgreSQL database", "Created using SvelteJS", "Responsive", "Bootstrap formatting", "Functioning contact form"]
+      specs: ["Served with Nginx", "Hosted on DigitalOcean", "Golang backend", "PostgreSQL database", "Created using SvelteJS", "Responsive", "Bootstrap formatting", "Formspree contact form"]
   },
   {
     id: 2,
