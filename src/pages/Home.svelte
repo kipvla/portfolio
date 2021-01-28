@@ -8,13 +8,8 @@
 
   const showSpecs = (id) => {
     const uls = document.querySelectorAll("ul");
-    const titles = document.querySelectorAll(".title");
-    console.log(id);
     let item = uls[id];
-    let title = titles[id];
     item.classList.toggle("shown");
-    title.classList.toggle("invisible");
-    console.log("specs shown");
   };
 </script>
 
@@ -29,13 +24,13 @@
     {#each projects as project}
       <div class="d-flex flex-column outer">
         <div class="align-self-start d-flex w-100 justify-content-between">
+          <span class="align-self-start title">
+            {project.title}
+          </span>
           <i
             class="fas fa-info-circle align-self-end"
             on:click={() => showSpecs(project.id)}
           />
-          <span class="align-self-start title invisible">
-            {project.title}
-          </span>
         </div>
         <div class="card my-4 shadow-lg" style="width: 30rem;">
           <a href={project.url}>
