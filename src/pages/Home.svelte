@@ -28,7 +28,8 @@
           </span>
           <i
             class="fas fa-info-circle align-self-end"
-            on:click={() => showSpecs(project.id)}
+            on:mouseenter={() => showSpecs(project.id)}
+            on:mouseleave={() => showSpecs(project.id)}
           />
         </div>
         <div class="card my-4 shadow-lg" style="width: 30rem;">
