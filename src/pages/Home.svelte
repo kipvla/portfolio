@@ -1,7 +1,6 @@
 <script>
   import projects from "../projects";
   import Title from "../components/Title.svelte";
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
 
   let shown = false;
@@ -22,7 +21,7 @@
     in:fade={{ duration: 2500 }}
   >
     {#each projects as project}
-      <div class="d-flex flex-column outer">
+      <div class="d-flex flex-column outer my-4">
         <div class="align-self-start d-flex w-100 justify-content-between">
           <span class="align-self-start title">
             {project.title}
@@ -65,7 +64,7 @@
   .card {
     border: none;
     margin: auto;
-    transition: transform 0.2s;
+    transition: transform 1s;
   }
 
   .card:active {
@@ -75,6 +74,8 @@
 
   .card:hover {
     cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 1s;
   }
 
   .card div ul {
@@ -110,6 +111,10 @@
     overflow: scroll;
     line-height: 1.3;
     font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
   }
 
   @media only screen and (max-width: 768px) {

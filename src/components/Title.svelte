@@ -1,126 +1,127 @@
 <script>
-    import { onMount } from "svelte";
-    import { scale } from 'svelte/transition';
+  import { onMount } from "svelte";
+  import { scale } from "svelte/transition";
 
-    onMount(() => {
-        var typer = document.getElementById("typewriter");
-        function setupTypewriter(t) {
-            var HTML = t.innerHTML;
+  onMount(() => {
+    var typer = document.getElementById("typewriter");
+    function setupTypewriter(t) {
+      var HTML = t.innerHTML;
 
-            t.innerHTML = "";
+      t.innerHTML = "";
 
-            var cursorPosition = 0,
-                tag = "",
-                writingTag = false,
-                tagOpen = false,
-                typeSpeed = 400,
-                tempTypeSpeed = 0;
+      var cursorPosition = 0,
+        tag = "",
+        writingTag = false,
+        tagOpen = false,
+        typeSpeed = 400,
+        tempTypeSpeed = 0;
 
-            var type = function () {
-                if (writingTag === true) {
-                    tag += HTML[cursorPosition];
-                }
-
-                if (!writingTag && tagOpen) {
-                    tag.innerHTML += HTML[cursorPosition];
-                }
-                if (!writingTag && !tagOpen) {
-                    if (HTML[cursorPosition] === " ") {
-                        tempTypeSpeed = 0;
-                    } else {
-                        tempTypeSpeed = Math.random() * typeSpeed + 50;
-                    }
-                    t.innerHTML += HTML[cursorPosition];
-                }
-
-                cursorPosition += 1;
-                if (cursorPosition < HTML.length - 1) {
-                    setTimeout(type, tempTypeSpeed);
-                }
-            };
-
-            return {
-                type: type,
-            };
+      var type = function () {
+        if (writingTag === true) {
+          tag += HTML[cursorPosition];
         }
-        let typewriter = setupTypewriter(typer);
-        setTimeout(() => {
-            typewriter.type();
-        }, 1000)
-        
-    });
 
+        if (!writingTag && tagOpen) {
+          tag.innerHTML += HTML[cursorPosition];
+        }
+        if (!writingTag && !tagOpen) {
+          if (HTML[cursorPosition] === " ") {
+            tempTypeSpeed = 0;
+          } else {
+            tempTypeSpeed = Math.random() * typeSpeed + 50;
+          }
+          t.innerHTML += HTML[cursorPosition];
+        }
+
+        cursorPosition += 1;
+        if (cursorPosition < HTML.length - 1) {
+          setTimeout(type, tempTypeSpeed);
+        }
+      };
+
+      return {
+        type: type,
+      };
+    }
+    let typewriter = setupTypewriter(typer);
+    setTimeout(() => {
+      typewriter.type();
+    }, 1000);
+  });
 </script>
 
-<style type="text/scss">
-    #typewriter {
-        font-size: 2em;
-        margin: 0;
-        font-family: "Courier New";
-    }
-
-    #typewriter:after {
-        content: "|";
-        animation: blink 500ms linear infinite alternate;
-    }
-
-    @-webkit-keyframes blink {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @-moz-keyframes blink {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes blink {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    div {
-        text-align: left;
-    }
-    h1 {
-        font-size: 3rem;
-    }
-
-    @media only screen and (max-width: 768px) {
-        div {
-            align-self: flex-start;
-            padding-left: 1rem;
-        }
-    }
-</style>
-
 <div class="d-flex flex-column justify-content-start order-0">
-    <h1 transition:scale="{{duration: 5000, opacity: 0.5, start: 0.5}}">kip riecken</h1>
-<span id="typewriter">developerr</span>
-<div class="mt-4">
+  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }}>
+    kip riecken
+  </h1>
+  <span id="typewriter">developerr</span>
+  <div class="mt-4">
     <!-- <ul class="list-unstyled" id="sidebar"> -->
-        <!-- <li class="sidebar-item"> -->
-            <a href="https://github.com/kipvla" class="mr-2 text-dark"><i
-                    class="fab fa-github" /></a>
-        <!-- </li> -->
-        <!-- <li class="sidebar-item"> -->
-            <a href="mailto:kip.riecken@gmail.com" class="mx-2 text-dark"><i
-                    class="fas fa-envelope" /></a>
-        <!-- </li> -->
-        <!-- <li class="sidebar-item"> -->
-            <a href="images/TechResume.pdf" class="ml-2 text-dark">resume</a>
-        <!-- </li> -->
+    <!-- <li class="sidebar-item"> -->
+    <a href="https://github.com/kipvla" class="mr-2 text-dark"
+      ><i class="fab fa-github" /></a
+    >
+    <!-- </li> -->
+    <!-- <li class="sidebar-item"> -->
+    <a href="mailto:kip.riecken@gmail.com" class="mx-2 text-dark"
+      ><i class="fas fa-envelope" /></a
+    >
+    <!-- </li> -->
+    <!-- <li class="sidebar-item"> -->
+    <a href="images/TechResume.pdf" class="ml-2 text-dark">resume</a>
+    <!-- </li> -->
     <!-- </ul> -->
+  </div>
 </div>
-</div>
+
+<style type="text/scss">
+  #typewriter {
+    font-size: 2em;
+    margin: 0;
+    font-family: "Courier New";
+  }
+
+  #typewriter:after {
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+  }
+
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  div {
+    text-align: left;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    div {
+      align-self: flex-start;
+    }
+  }
+</style>
