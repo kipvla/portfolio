@@ -35,8 +35,8 @@ export default [
     id: 4,
     title: "Baby Name Generator",
     description: "",
-    image: "images/BabyScreenS.png",
-    url: "https://whatshouldinamemybaby.herokuapp.com/",
+    image: "images/BabyName.png",
+    url: "https://whattonamemybaby.netlify.app/",
     specs: ["Responsive", "Bootstrap formatting", "Pulls from API"],
   },
   {
