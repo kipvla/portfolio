@@ -2,6 +2,22 @@
   import { onMount } from "svelte";
   import { scale } from "svelte/transition";
 
+  export let color;
+  $: {
+    console.log("color changed", color);
+    // if (!color) {
+    //   document.querySelector("h1").style.color = "black";
+    // } else {
+    //   document.querySelector("h1").style.color = "white";
+    // }
+    // will only get called when the `color` changed.
+  }
+
+  //   if (color) {
+  //       document.querySelector("h1").style.color = "white";
+  //       console.log(color)
+  //   }
+
   onMount(() => {
     var typer = document.getElementById("typewriter");
     function setupTypewriter(t) {
@@ -51,24 +67,24 @@
 </script>
 
 <div class="d-flex flex-column justify-content-start order-0">
-  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }}>
+  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }} style="color: {color}">
     kip riecken
   </h1>
-  <span id="typewriter">developerr</span>
+  <span id="typewriter" style="color: {color}">developerr</span>
   <div class="mt-4">
     <!-- <ul class="list-unstyled" id="sidebar"> -->
     <!-- <li class="sidebar-item"> -->
     <a href="https://github.com/kipvla" class="mr-2 text-dark"
-      ><i class="fab fa-github" /></a
+      ><i class="fab fa-github" style="color: {color}"/></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
     <a href="mailto:kip.riecken@gmail.com" class="mx-2 text-dark"
-      ><i class="fas fa-envelope" /></a
+      ><i class="fas fa-envelope" style="color: {color}"/></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
-    <a href="images/TechResume.pdf" class="ml-2 text-dark">resume</a>
+    <a href="images/TechResume.pdf" class="ml-2 text-dark" style="color: {color}!important">resume</a>
     <!-- </li> -->
     <!-- </ul> -->
   </div>

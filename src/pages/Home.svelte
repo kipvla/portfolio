@@ -3,7 +3,34 @@
   import Title from "../components/Title.svelte";
   import { fade } from "svelte/transition";
 
+  let component;
+  let props;
+
   let shown = false;
+  let color = "black";
+
+  const colorChange = () => {
+    if (color === "black") {
+      color = "white";
+      return;
+    }
+      color = "black"
+  }
+
+  const devMode = () => {
+    const titles = document.querySelectorAll(".title");
+    const infos = document.querySelectorAll(".fa-info-circle");
+    const all = document.querySelector("#all");
+    const btn = document.querySelector(".btn");
+    const footer = document.querySelector(".footer");
+    titles.forEach((title) => title.classList.toggle("text-white"));
+    infos.forEach((info) => info.classList.toggle("text-white"));
+    all.classList.toggle("bg-white");
+    footer.classList.toggle("text-white");
+    btn.classList.toggle("text-white");
+    btn.classList.toggle("bg-secondary");
+    colorChange();
+  };
 
   const showSpecs = (id) => {
     const uls = document.querySelectorAll("ul");
@@ -12,8 +39,14 @@
   };
 </script>
 
-<div class="container-fluid justify-content-between" id="all">
-  <Title />
+<div class="container-fluid justify-content-between bg-white" id="all">
+  <div class="d-flex flex-column align-items-start">
+    <Title color={color} />
+    <button class="btn btn-sm mt-4" on:click={() => devMode()}>
+      click me 
+      <i class="fas fa-code" />
+    </button>
+  </div>
   <br />
   <div
     class="d-flex flex-wrap justify-content-start order-1"
@@ -27,16 +60,16 @@
             {project.title}
           </span>
           {#if window.screen.width > 768}
-          <i
-          class="fas fa-info-circle align-self-end"
-          on:mouseenter={() => showSpecs(project.id)}
-          on:mouseleave={() => showSpecs(project.id)}
-        />
+            <i
+              class="fas fa-info-circle align-self-end"
+              on:mouseenter={() => showSpecs(project.id)}
+              on:mouseleave={() => showSpecs(project.id)}
+            />
           {:else}
-          <i
-          class="fas fa-info-circle align-self-end"
-          on:click={() => showSpecs(project.id)}
-        />
+            <i
+              class="fas fa-info-circle align-self-end"
+              on:click={() => showSpecs(project.id)}
+            />
           {/if}
         </div>
         <div class="card my-4 shadow-lg" style="width: 30rem;">
@@ -63,6 +96,7 @@
 <style>
   .container-fluid {
     font-family: "Source Code Pro", monospace;
+    background-color: black;
   }
 
   .outer {
