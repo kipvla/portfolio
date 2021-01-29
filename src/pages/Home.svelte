@@ -26,11 +26,18 @@
           <span class="align-self-start title">
             {project.title}
           </span>
+          {#if window.screen.width > 768}
           <i
-            class="fas fa-info-circle align-self-end"
-            on:mouseenter={() => showSpecs(project.id)}
-            on:mouseleave={() => showSpecs(project.id)}
-          />
+          class="fas fa-info-circle align-self-end"
+          on:mouseenter={() => showSpecs(project.id)}
+          on:mouseleave={() => showSpecs(project.id)}
+        />
+          {:else}
+          <i
+          class="fas fa-info-circle align-self-end"
+          on:click={() => showSpecs(project.id)}
+        />
+          {/if}
         </div>
         <div class="card my-4 shadow-lg" style="width: 30rem;">
           <a href={project.url}>
