@@ -26,11 +26,16 @@ export default [
   },
   {
     id: 2,
-    title: "2020 US elections Voting Info",
+    title: "Bilingual Musician Site",
     description: "",
-    image: "images/VotingScreenS.png",
-    url: "https://usvotingapp2020.herokuapp.com/",
-    specs: ["Responsive", "Bootstrap formatting", "Pulls from API"],
+    image: "images/Roman.png",
+    url: "https://romanyearian.netlify.app",
+    specs: [
+      "Created with SvelteJS",
+      "Bilingual with svelte-i18n",
+      "Responsive",
+      "Bootstrap formatting",
+    ],
   },
   {
     id: 3,
@@ -55,15 +60,11 @@ export default [
   },
   {
     id: 5,
-    title: "Bilingual Musician Site",
+    title: "2020 US elections Voting Info",
     description: "",
-    image: "images/Roman.png",
-    url: "https://romanyearian.netlify.app",
-    specs: [
-      "Created with SvelteJS",
-      "Bilingual with svelte-i18n",
-      "Responsive",
-      "Bootstrap formatting",
-    ],
-  },
+    image: "images/VotingScreenS.png",
+    url: "https://usvotingapp2020.herokuapp.com/",
+    specs: ["Responsive", "Bootstrap formatting", "Pulls from API"],
+  }
+
 ];

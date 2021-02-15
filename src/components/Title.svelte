@@ -67,20 +67,23 @@
 </script>
 
 <div class="d-flex flex-column justify-content-start order-0">
-  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }} style="color: {color}">
+  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }} style="color: {color}" class="my-2">
     kip riecken
   </h1>
   <span id="typewriter" style="color: {color}">developerr</span>
-  <div class="mt-4">
+  <div class="my-4">
     <!-- <ul class="list-unstyled" id="sidebar"> -->
     <!-- <li class="sidebar-item"> -->
-    <a href="https://github.com/kipvla" class="mr-2 text-dark"
+    <a href="https://github.com/kipvla" class="text-dark btn rounded-circle"
       ><i class="fab fa-github" style="color: {color}"/></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
-    <a href="mailto:kip.riecken@gmail.com" class="mx-2 text-dark"
+    <a href="mailto:kip.riecken@gmail.com" class="text-dark btn rounded-circle"
       ><i class="fas fa-envelope" style="color: {color}"/></a
+    >
+    <a href="https://codepen.io/krvla" class="text-dark btn rounded-circle"
+      ><i class="fab fa-codepen" style="color: {color}"/></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
@@ -100,6 +103,11 @@
   #typewriter:after {
     content: "|";
     animation: blink 500ms linear infinite alternate;
+  }
+
+  div > a:hover {
+    background: pink;
+    transition: all 500ms;
   }
 
   @-webkit-keyframes blink {

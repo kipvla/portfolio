@@ -2,6 +2,7 @@
   import projects from "../projects";
   import Title from "../components/Title.svelte";
   import { fade } from "svelte/transition";
+  import { init } from "emailjs-com";
 
   let component;
   let props;
@@ -14,8 +15,8 @@
       color = "white";
       return;
     }
-      color = "black"
-  }
+    color = "black";
+  };
 
   const devMode = () => {
     const titles = document.querySelectorAll(".title");
@@ -37,13 +38,34 @@
     let item = uls[id];
     item.classList.toggle("shown");
   };
+
+
+  window.onload = function () {
+    init("user_L3ByXl8YCtcujXmSA2V60");
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = (Math.random() * 100000) | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm("contact_service", "contact_form", this).then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      });
+  };
 </script>
 
 <div class="container-fluid justify-content-between bg-white" id="all">
   <div class="d-flex flex-column align-items-start">
-    <Title color={color} />
+    <Title {color} />
     <button class="btn btn-sm mt-4" on:click={() => devMode()}>
-      click me 
+      click me
       <i class="fas fa-code" />
     </button>
   </div>
@@ -54,7 +76,7 @@
     in:fade={{ duration: 2500 }}
   >
     {#each projects as project}
-      <div class="d-flex flex-column outer my-4">
+      <div class="d-flex flex-column outer my-5">
         <div class="align-self-start d-flex w-100 justify-content-between">
           <span class="align-self-start title">
             {project.title}
@@ -90,7 +112,23 @@
       </div>
     {/each}
   </div>
-  <div class="footer">© Copyright 2021 Kip Riecken</div>
+  <!-- <form id="contact-form">
+    <div class="form-group">
+      <input type="hidden" name="contact_number" />
+      <label for="user_name">Name</label>
+      <input type="text" class="form-control" name="user_name" />
+    </div>
+    <div class="form-group">
+      <label for="user_email">Email</label>
+      <input type="email" class="form-control" name="user_email" />
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea class="form-control" name="message" />
+    </div>
+    <input type="submit" value="Send" />
+  </form> -->
+  <div class="footer py-5">© Copyright 2021 Kip Riecken</div>
 </div>
 
 <style>
