@@ -22,7 +22,7 @@
     const titles = document.querySelectorAll(".title");
     const infos = document.querySelectorAll(".fa-info-circle");
     const all = document.querySelector("#all");
-    const btn = document.querySelector(".btn");
+    const btn = document.querySelector("#click");
     const footer = document.querySelector(".footer");
     titles.forEach((title) => title.classList.toggle("text-white"));
     infos.forEach((info) => info.classList.toggle("text-white"));
@@ -64,7 +64,7 @@
 <div class="container-fluid justify-content-between bg-white" id="all">
   <div class="d-flex flex-column align-items-start">
     <Title {color} />
-    <button class="btn btn-sm mt-4" on:click={() => devMode()}>
+    <button class="btn btn-sm mt-4" id="click" on:click={() => devMode()}>
       click me
       <i class="fas fa-code" />
     </button>
