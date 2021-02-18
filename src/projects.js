@@ -1,13 +1,5 @@
 export default [
   {
-    id: 0,
-    title: "Sam Pederson Photography",
-    description: "",
-    image: "images/SamScreenS.png",
-    url: "https://sampedersenphotography.netlify.app",
-    specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
-  },
-  {
     id: 1,
     title: "My personal website",
     description: "",
@@ -36,6 +28,22 @@ export default [
       "Responsive",
       "Bootstrap formatting",
     ],
+  },
+  {
+    id: 0,
+    title: "Photography site for myself",
+    description: "",
+    image: "images/myphotos.png",
+    url: "https://https://photosbykip.netlify.app",
+    specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
+  },
+  {
+    id: 0,
+    title: "Sam Pederson Photography",
+    description: "",
+    image: "images/SamScreenS.png",
+    url: "https://sampedersenphotography.netlify.app",
+    specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
   },
   {
     id: 3,
