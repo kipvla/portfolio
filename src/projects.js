@@ -34,7 +34,7 @@ export default [
     title: "Photography site for myself",
     description: "",
     image: "images/myphotos.png",
-    url: "//https://photosbykip.netlify.app",
+    url: "https://photosbykip.netlify.app",
     specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
   },
   {
