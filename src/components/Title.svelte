@@ -3,20 +3,6 @@
   import { scale } from "svelte/transition";
 
   export let color;
-  $: {
-    console.log("color changed", color);
-    // if (!color) {
-    //   document.querySelector("h1").style.color = "black";
-    // } else {
-    //   document.querySelector("h1").style.color = "white";
-    // }
-    // will only get called when the `color` changed.
-  }
-
-  //   if (color) {
-  //       document.querySelector("h1").style.color = "white";
-  //       console.log(color)
-  //   }
 
   onMount(() => {
     var typer = document.getElementById("typewriter");
@@ -67,7 +53,11 @@
 </script>
 
 <div class="d-flex flex-column justify-content-start order-0">
-  <h1 transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }} style="color: {color}" class="my-2">
+  <h1
+    transition:scale={{ duration: 5000, opacity: 0.5, start: 0.5 }}
+    style="color: {color}"
+    class="my-2"
+  >
     kip riecken
   </h1>
   <span id="typewriter" style="color: {color}">developerr</span>
@@ -75,21 +65,25 @@
     <!-- <ul class="list-unstyled" id="sidebar"> -->
     <!-- <li class="sidebar-item"> -->
     <a href="https://github.com/kipvla" class="text-dark btn rounded-circle"
-      ><i class="fab fa-github" style="color: {color}"/></a
+      ><i class="fab fa-github" style="color: {color}" /></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
     <a href="mailto:kip.riecken@gmail.com" class="text-dark btn rounded-circle"
-      ><i class="fas fa-envelope" style="color: {color}"/></a
+      ><i class="fas fa-envelope" style="color: {color}" /></a
     >
     <a href="https://codepen.io/krvla" class="text-dark btn rounded-circle"
-      ><i class="fab fa-codepen" style="color: {color}"/></a
+      ><i class="fab fa-codepen" style="color: {color}" /></a
     >
     <!-- </li> -->
     <!-- <li class="sidebar-item"> -->
-    <a href="images/TechResume.pdf" class="ml-2 text-dark" style="color: {color}!important">resume</a>
+    <a
+      href="images/TechResume.pdf"
+      class="ml-2 text-dark"
+      style="color: {color}!important">resume</a
+    >
     <!-- </li> -->
-    <!-- </ul> -->
+
   </div>
 </div>
 
