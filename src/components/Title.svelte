@@ -62,28 +62,25 @@
   </h1>
   <span id="typewriter" style="color: {color}">developerr</span>
   <div class="my-4">
-    <!-- <ul class="list-unstyled" id="sidebar"> -->
-    <!-- <li class="sidebar-item"> -->
     <a href="https://github.com/kipvla" class="text-dark btn rounded-circle"
       ><i class="fab fa-github" style="color: {color}" /></a
-    >
-    <!-- </li> -->
-    <!-- <li class="sidebar-item"> -->
-    <a href="mailto:kip.riecken@gmail.com" class="text-dark btn rounded-circle"
-      ><i class="fas fa-envelope" style="color: {color}" /></a
     >
     <a href="https://codepen.io/krvla" class="text-dark btn rounded-circle"
       ><i class="fab fa-codepen" style="color: {color}" /></a
     >
-    <!-- </li> -->
-    <!-- <li class="sidebar-item"> -->
+    <a
+      href="https://www.linkedin.com/in/kipriecken/"
+      class="text-dark btn rounded-circle"
+      ><i class="fab fa-linkedin-in" style="color: {color}" /></a
+    >
+    <a href="mailto:kip.riecken@gmail.com" class="text-dark btn rounded-circle"
+      ><i class="fas fa-envelope" style="color: {color}" /></a
+    >
     <a
       href="images/TechResume.pdf"
       class="ml-2 text-dark"
       style="color: {color}!important">resume</a
     >
-    <!-- </li> -->
-
   </div>
 </div>
 
