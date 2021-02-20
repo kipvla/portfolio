@@ -77,7 +77,7 @@
       ><i class="fas fa-envelope" style="color: {color}" /></a
     >
     <a
-      href="images/TechResume.pdf"
+      href="images/Tech Resume.pdf"
       class="ml-2 text-dark"
       style="color: {color}!important">resume</a
     >
