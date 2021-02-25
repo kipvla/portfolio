@@ -1,6 +1,6 @@
 export default [
   {
-    id: 1,
+    id: 0,
     title: "My personal website",
     description: "",
     image: "images/MeScreenS.png",
@@ -17,7 +17,7 @@ export default [
     ],
   },
   {
-    id: 2,
+    id: 1,
     title: "Bilingual Musician Site",
     description: "",
     image: "images/Roman.png",
@@ -30,7 +30,7 @@ export default [
     ],
   },
   {
-    id: 0,
+    id: 2,
     title: "Photography site for myself",
     description: "",
     image: "images/myphotos.png",
@@ -38,7 +38,7 @@ export default [
     specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
   },
   {
-    id: 0,
+    id: 3,
     title: "Sam Pederson Photography",
     description: "",
     image: "images/SamScreenS.png",
@@ -46,7 +46,7 @@ export default [
     specs: ["Created using SvelteJS", "Responsive", "Bootstrap formatting"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Responsive Advent Calendar",
     description: "",
     image: "images/AdventScreenS.png",
@@ -59,7 +59,7 @@ export default [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Baby Name Generator",
     description: "",
     image: "images/BabyName.png",
@@ -67,7 +67,7 @@ export default [
     specs: ["Responsive", "Bootstrap formatting", "Pulls from API"],
   },
   {
-    id: 5,
+    id: 6,
     title: "2020 US elections Voting Info",
     description: "",
     image: "images/VotingScreenS.png",
