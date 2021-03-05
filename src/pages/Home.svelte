@@ -39,7 +39,6 @@
     item.classList.toggle("shown");
   };
 
-
   window.onload = function () {
     init("user_L3ByXl8YCtcujXmSA2V60");
     document
@@ -112,22 +111,6 @@
       </div>
     {/each}
   </div>
-  <!-- <form id="contact-form">
-    <div class="form-group">
-      <input type="hidden" name="contact_number" />
-      <label for="user_name">Name</label>
-      <input type="text" class="form-control" name="user_name" />
-    </div>
-    <div class="form-group">
-      <label for="user_email">Email</label>
-      <input type="email" class="form-control" name="user_email" />
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea class="form-control" name="message" />
-    </div>
-    <input type="submit" value="Send" />
-  </form> -->
   <div class="footer py-5">© Copyright 2021 Kip Riecken</div>
 </div>
 
