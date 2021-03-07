@@ -8,6 +8,7 @@ export default [
     specs: [
       "Served with Nginx",
       "Hosted on DigitalOcean",
+      "SSL Certified",
       "Golang backend",
       "PostgreSQL database",
       "Created using SvelteJS",
